@@ -37,14 +37,98 @@ body {
     margin: 0;
 }
 
-div {
+main, div {
     display: block;
 }
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
+}
+
+.header {
+    display: block;
+    position: relative;
+}
+
+.cursive {
+    background-color: #efefef;
+    font-size: 16px;
+    font-family: "ClearSans Italic";
+    color: rgb(74, 74, 74);
+    font-style: italic;
+    line-height: 1.2;
+    text-align: left;
+    padding-left: 100px;
+    max-width: 200px;
+}
+
+.menu {
+    display: block;
+    background-color: #ffffff;
+}
+
+.menu li {
+    display: inline;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    font-size: 15px;
+    font-family: "ClearSans Medium";
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    line-height: 1.2;
+    float: left;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.phones {
+    background-color: #563997;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 300px;
+    padding: 20px 50px 20px 20px;
+}
+
+.phones .icon {
+    background: url(../images/sprites.svg) -1px -1px;
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.phones a {
+    font-size: 24px;
+    font-family: "ClearSans Bold";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left;
+    text-decoration: none;
+}
+
+.phones p {
+    font-size: 14px;
+    font-family: "Cleanvertising Light";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left;
+    margin: 0;
+}
+
+.start {
+    background-image: url(../images/main_1.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.first_wrapper {
+    padding: 150px 0;
 }
 
 h2 {
@@ -62,16 +146,6 @@ h3 {
   color: rgb(255, 255, 255);
   line-height: 1.2;
   text-align: center;
-}
-
-.start {
-    background-image: url(../images/main_1.jpg);
-    background-position: center center;
-    background-size: cover;
-}
-
-.first_wrapper {
-    padding: 150px 0;
 }
 
 .start .book {
