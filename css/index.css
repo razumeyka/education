@@ -59,7 +59,7 @@ div {
     font-style: italic;
     line-height: 1.2;
     text-align: left;
-    padding: 10px 0 10px 210px;
+    padding: 10px 0 10px 140px;
     max-width: 300px;
 }
 
@@ -68,7 +68,7 @@ div {
     background-color: #ffffff;
     overflow:hidden;
     margin: 0;
-    padding-left: 200px;
+    padding-left: 125px;
 }
 
 .menu li {
@@ -94,31 +94,44 @@ div {
     padding: 4px 0;
 }
 
-.mobile_menu {
-    position: absolute;
-    top: 56px;
-    left: 0;
-    width: 100%;
-    min-width: 360px;
-    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);
+.burger_wrapper {
     display: none;
+    background-color: #ffffff;
+    height: 44px;
 }
-
-.mobile_menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.burger {
+    position: absolute;
+    cursor: pointer;
     background: #fff;
+    width: 40px;
+    height: 40px;
+    left: 180px;
+    top: 59px;
+    border: 1px solid #563997;
+    border-radius: 4px;
 }
 
-.mobile_menu ul li a {
+.burger span, .burger span::before, .burger span::after {
+    cursor: pointer;
+    border-radius: 5px;
+    height: 3px;
+    width: 28px;
+    background: #563997;
+    position: absolute;
     display: block;
-    text-decoration: none;
-    text-align: center;
-    padding: 22px 15px;
-    text-transform: uppercase;
-    color: #194874;
-    border-bottom: 1px solid whitesmoke;
+    top: 10px;
+    left: 6px;
+}
+
+.burger span::before {
+    content: '';
+    left: 0;
+}
+
+.burger span::after {
+    content: '';
+    top: 20px;
+    left: 0;
 }
 
 .phones {
@@ -126,9 +139,9 @@ div {
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;
-    max-width: 300px;
-    padding: 10px 15px;
+    max-width: 290px;
+    padding: 11px 10px;
+    z-index: 1;
 }
 
 .phones .icon {
@@ -165,6 +178,7 @@ div {
     position: absolute;
     top: 0;
     color: white;
+    z-index: 1;
 }
 
 .start {
@@ -206,4 +220,33 @@ h3 {
     margin: 0 auto;
     border-bottom: 3px solid #f7a801;
     padding: 0 25px 5px;
+}
+
+@media (max-width: 1200px) {
+     .wrapper {
+     max-width:1200px;
+     padding:0 40px;
+     margin:0 auto;
+     left: 0;
+    }
+    
+    .navbar {
+        display: none;
+    }
+    
+    .burger_wrapper {
+        display: block;
+    }
+    
+    .menu {
+        padding-left: 200px;
+    }
+    
+    .menu li {
+        float: none;
+    }
+    
+    .menu li span {
+        border: none;
+    }
 }
