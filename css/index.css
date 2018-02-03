@@ -41,11 +41,16 @@ div {
     display: block;
 }
 
-.wrapper {
+.special_wrapper {
     position: relative;
     left: 50%;
     margin-left: -600px;
     width: calc(50% + 600px);
+}
+.wrapper {
+     max-width:1200px;
+     padding:0 40px;
+     margin:0 auto;
 }
 
 .cursive {
@@ -172,21 +177,25 @@ div {
 }
 
 .logo1 {
-    background-color: #563997;
+    background-image: url(../images/ribbon-big.png);
+    background-position: center center;
+    background-size: cover;
     width: 120px;
     height: 130px;
     position: absolute;
     top: 0;
-    color: white;
     z-index: 1;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .start {
     background: url(../images/main_1.jpg) center center;
     background-size: cover;
+    height: 560px;
 }
 
-.first_wrapper {
+.start .wrapper {
     padding: 200px 0 135px;
 }
 
@@ -222,12 +231,169 @@ h3 {
     padding: 0 25px 5px;
 }
 
+.questions {
+    background: url(../images/pattern%20%282%29.png) #563997;
+    border: 4px solid #ffffff;
+    font-size: 22px;
+    font-family: "ClearSans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.13;
+    text-align: center;
+    padding: 45px 0 30px;
+    margin-top: -105px;
+    letter-spacing: 1.2px;
+    position: relative;
+}
+
+.questions::before {
+    content: "";
+    border: 4px solid #f7a801;
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    height: 175px;
+    width: 1220px;
+}
+
+.wpcf7-form-control-wrap input {
+    padding: 14px;
+    font-size: 15px;
+    width: 22%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 3px;
+    height: 46px;
+    margin: 20px 10px;
+}
+
+.wpcf7-form-control-wrap input[type="submit"] {
+    background-color: #f7a801;
+    font-size: 16px;
+    font-family: "ClearSans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 5px #d35a00;
+}
+
+.courses h2 {
+  font-size: 28px;
+  font-family: "ClearSans";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  margin: 70px 0 20px;
+  letter-spacing: 0.7px;
+}
+
+.courses h2 span {
+   color: #f7a801; 
+   font-size: 34px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 33.333%;
+    padding: 20px;
+}
+
+.card_wrapper {
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 10px #cfcfcf;
+}
+
+.card .photo {
+    background-color: #563997;
+    height: 260px;
+    position: relative;
+}
+
+.card .photo .icon {
+    background: url(../images/sprites.svg) #ededed;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -60px;
+    left: 110px;
+    height: 130px;
+    width: 140px;
+}
+
+.school .photo .icon {
+    background-position: -965px -100px;
+}
+
+.before_school .photo .icon {
+    background-position: -205px -100px;
+}
+
+.after_school .photo .icon {
+    background-position: -85px -100px; 
+}
+
+.card .text {
+    background-color: #ededed;
+    padding: 27px;
+}
+
+.card .text .line1 {
+    font-size: 20px;
+    font-family: "ClearSans";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    position: relative;
+}
+
+.card .text .line2 {
+    font-size: 13px;
+    font-family: "ClearSans";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: center;
+    padding: 5px;
+}
+
+.card input {
+    box-sizing: border-box;
+    border: none;
+    border-radius: 3px;
+    height: 46px;
+    font-size: 16.565px;
+    font-family: "ClearSans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    background-color: #f7a801;
+    margin-top: 20px;
+    box-shadow: 0 5px #d35a00;
+    letter-spacing: 1px;
+}
+
 @media (max-width: 1200px) {
      .wrapper {
      max-width:1200px;
      padding:0 40px;
      margin:0 auto;
      left: 0;
+     width: auto;
     }
     
     .navbar {
