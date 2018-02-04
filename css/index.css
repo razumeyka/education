@@ -47,6 +47,7 @@ div {
     margin-left: -600px;
     width: calc(50% + 600px);
 }
+
 .wrapper {
      max-width:1200px;
      padding:0 40px;
@@ -74,6 +75,8 @@ div {
     overflow:hidden;
     margin: 0;
     padding-left: 125px;
+    position: absolute;
+    z-index: 1;
 }
 
 .menu li {
@@ -126,7 +129,9 @@ div {
     display: block;
     top: 10px;
     left: 6px;
+    transition: all 200ms ease-in-out;
 }
+
 
 .burger span::before {
     content: '';
@@ -135,8 +140,22 @@ div {
 
 .burger span::after {
     content: '';
-    top: 20px;
     left: 0;
+    top: 20px;
+}
+
+.burger span:active {
+    opacity: 0;
+}
+    
+ .burger span::before:active  {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+ .burger span::after:active  {
+    transform: rotate(-45deg);
+    top: 0;
 }
 
 .phones {
@@ -184,6 +203,7 @@ div {
     height: 130px;
     position: absolute;
     top: 0;
+    left: 0;
     z-index: 1;
     text-align: center;
     padding-top: 10px;
@@ -231,6 +251,20 @@ h3 {
     padding: 0 25px 5px;
 }
 
+.form_for_questions .wrapper {
+    position: relative;
+    max-width: 1150px;
+}
+
+.for_line {
+    border: 4px solid #f7a801;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin-top: -85px;
+}
+
 .questions {
     background: url(../images/pattern%20%282%29.png) #563997;
     border: 4px solid #ffffff;
@@ -241,34 +275,37 @@ h3 {
     text-transform: uppercase;
     line-height: 1.13;
     text-align: center;
-    padding: 45px 0 30px;
-    margin-top: -105px;
+    padding: 45px 30px 30px;
     letter-spacing: 1.2px;
-    position: relative;
+    margin-top: -35px;
 }
 
-.questions::before {
-    content: "";
-    border: 4px solid #f7a801;
-    position: absolute;
-    top: 15px;
-    left: -15px;
-    height: 175px;
-    width: 1220px;
+.questions form {
+    display: block;
+    overflow: hidden;
+}
+
+.wpcf7-form-control-wrap {
+    display: block;
+    box-sizing: border-box;
+    width: 25%;
+    padding: 20px 10px;
+    float: left;
 }
 
 .wpcf7-form-control-wrap input {
-    padding: 14px;
+    display: block;
+    padding-left: 15px;
     font-size: 15px;
-    width: 22%;
     box-sizing: border-box;
     border: none;
     border-radius: 3px;
     height: 46px;
-    margin: 20px 10px;
+    width: 100%;
 }
 
 .wpcf7-form-control-wrap input[type="submit"] {
+    display: block;
     background-color: #f7a801;
     font-size: 16px;
     font-family: "ClearSans";
@@ -280,6 +317,10 @@ h3 {
     box-shadow: 0 5px #d35a00;
 }
 
+.courses .wrapper {
+    margin-top: 160px;
+}
+
 .courses h2 {
   font-size: 28px;
   font-family: "ClearSans";
@@ -288,7 +329,7 @@ h3 {
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
-  margin: 70px 0 20px;
+  margin-bottom:20px;
   letter-spacing: 0.7px;
 }
 
@@ -326,7 +367,9 @@ h3 {
     box-sizing: border-box;
     position: absolute;
     bottom: -60px;
-    left: 110px;
+    left: 0;
+    right: 0;
+    margin: auto;
     height: 130px;
     width: 140px;
 }
@@ -368,27 +411,75 @@ h3 {
     padding: 5px;
 }
 
-.card input {
+.card .button {
+    background-color: #f7a801;
     box-sizing: border-box;
     border: none;
     border-radius: 3px;
-    height: 46px;
-    font-size: 16.565px;
+    box-shadow: 0 5px #d35a00;
+    font-size: 16px;
     font-family: "ClearSans";
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-transform: uppercase;
+    text-decoration: none;
     line-height: 1.2;
     text-align: center;
-    width: 100%;
-    background-color: #f7a801;
-    margin-top: 20px;
-    box-shadow: 0 5px #d35a00;
     letter-spacing: 1px;
+    padding: 14px;
+    margin: 20px 0 10px;
+    display: block;
+}
+
+.discount .wrapper {
+    margin: 60px auto;
+}
+
+.discount .promo {
+    background-image: url(../images/promo.jpg);
+    background-position: center center;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 355px;
+    padding: 80px 0;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 10px #cfcfcf;
+}
+
+.discount h2 {
+    display: block;
+    max-width: 500px;
+    font-size: 28px;
+    font-family: "ClearSans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.357;
+    margin: 18px auto 22px;
+    letter-spacing: 0.8px;
+}
+
+.discount h3 {
+    font-size: 20px;
+    font-family: "ClearSans";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0;
+    font-weight: normal;
+    margin: 23px;
+}
+
+.discount span {
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 3px solid #f7a801;
+    width: 150px;
+    margin: 0 auto;
 }
 
 @media (max-width: 1200px) {
-     .wrapper {
+     .special_wrapper {
      max-width:1200px;
      padding:0 40px;
      margin:0 auto;
@@ -405,7 +496,9 @@ h3 {
     }
     
     .menu {
-        padding-left: 200px;
+        padding-left: 0;
+        top: 70px;
+        left: 230px;
     }
     
     .menu li {
@@ -414,5 +507,29 @@ h3 {
     
     .menu li span {
         border: none;
+    }
+}
+
+@media (max-width: 830px) {
+    .wpcf7-form-control-wrap {
+    width: 50%;
+    }
+    
+    .courses .wrapper {
+    margin-top: 220px;
+    }
+    
+    .card {
+    width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .wpcf7-form-control-wrap {
+    width: 100%;
+    }
+    
+    .courses .wrapper {
+    margin-top: 420px;
     }
 }
