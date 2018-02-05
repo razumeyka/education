@@ -485,6 +485,7 @@ h3 {
     box-sizing: border-box;
     border-bottom-right-radius: 90%;
     border-top-right-radius: 90%;
+    overflow:hidden;
 }
 .image_wrapper {
     position: absolute;
@@ -659,6 +660,7 @@ h3 {
 
 .first_footer {
     background-color: #563997;
+    width: 100%;
 }
 
 .first_footer .wrapper {
@@ -674,8 +676,8 @@ footer .button {
     background-color: #cfc9dc;
     box-sizing: border-box;
     border: 3px solid #ffffff;
-    max-width: 360px;
-    padding: 14px;
+    max-width: 380px;
+    padding: 16px;
     margin: 20px 0 10px;
     display: block;
     text-decoration: none;
@@ -684,26 +686,27 @@ footer .button {
 
 footer .button .icon {
     background: url(../images/sprites.svg) #cfc9dc;
+    background-size: 500px;
     box-sizing: border-box;
     position: absolute;
     bottom: 0;
     left: 0;
     top: 0;
     margin: auto 0;
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
 }
 
 footer .school .icon {
-    background-position: -999px -115px;
+    background-position: -490px -50px;
 }
 
 footer .before_school .icon {
-    background-position: -240px -115px;
+    background-position: -110px -50px;
 }
 
 footer .after_school .icon {
-    background-position: -115px -115px; 
+    background-position: -50px -50px;
 }
 
 footer .button .line1 {
@@ -714,21 +717,22 @@ footer .button .line1 {
     text-transform: uppercase;
     line-height: 1.2;
     text-align: left;
-    margin-left: 70px;
+    margin: 0 0 5px 50px;
 }
 
 footer .button .line2 {
-    font-size: 15px;
+    font-size: 13px;
     font-family: "ClearSans";
     color: rgb(0, 0, 0);
     line-height: 1.2;
     text-align: left;
-    margin-left: 70px;
+    margin-left: 50px;
+    letter-spacing: 0;
 }
 
 footer .contacts {
    text-align: right;
-   margin: 60px 0 90px;
+   margin: 60px 0 90px auto;
 }
 
 .contacts img {
