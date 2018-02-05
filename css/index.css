@@ -111,7 +111,7 @@ div {
     background: #fff;
     width: 40px;
     height: 40px;
-    left: 180px;
+    left: 10px;
     top: 59px;
     border: 1px solid #563997;
     border-radius: 4px;
@@ -144,16 +144,16 @@ div {
 
 .burger.active {
 
-.burger.active span {
+.burger .active span {
     opacity: 0;
 }
     
- .burger.active span::before  {
+ .burger .active span::before  {
     transform: rotate(45deg);
     top: 0;
 }
 
- .burger.active span::after  {
+ .burger .active span::after  {
     transform: rotate(-45deg);
     top: 0;
 }       
@@ -412,7 +412,7 @@ h3 {
     padding: 5px;
 }
 
-.card .button {
+.card .button, .reviews .button {
     background-color: #f7a801;
     box-sizing: border-box;
     border: none;
@@ -479,29 +479,32 @@ h3 {
     margin: 0 auto;
 }
 
-.advantages .wrapper {
-    margin: 75px auto;
-    max-width: 1250px;
-}
-
 .advantages  .man_and_woman {
     background-color: #f5f5f5;
-    float: left;
+    background-size: cover;
     box-sizing: border-box;
     border-bottom-right-radius: 90%;
     border-top-right-radius: 90%;
 }
+.image_wrapper {
+    position: absolute;
+    right: 50%;
+    margin-right: 160px;
+}
 
 .advantages  .man_and_woman img {
     width: 430px;
-    padding: 50px 0;
+    padding: 35px 0;
 }
 
-.advantages_cards {
+.cards_wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -30px;
-    padding-top: 50px;
+    padding-top: 75px;
+    left: 50%;
+    position: relative;
+    margin-left: -190px;
+    max-width: 820px;
 }
 
 .advantage {
@@ -564,6 +567,215 @@ h3 {
     padding: 20px;
 }
 
+.reviews {
+    background-image: url(../images/reviews.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.reviews .wrapper {
+    padding-bottom: 60px;
+}
+
+.reviews h2 {
+    padding: 75px 0 10px;
+    font-size: 28px;
+    font-family: "ClearSans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.8px;
+}
+
+.review_cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -25px;
+}
+
+.reviews .card {
+    padding: 25px;
+}
+
+.reviews .text {
+    background-color: #ffffff;
+    font-size: 16px;
+    font-family: "ClearSans";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: justify;
+    padding: 25px 30px;
+    height: 115px;
+}
+
+.reviews .icon {
+    background: url(../images/sprites.svg) -997px -370px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    height: 55px;
+    width: 55px;
+    background-color: #ffffff;
+}
+
+.reviews .name {
+    background-color: #f7a801;
+    font-size: 18px;
+    font-family: "ClearSans";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: right;
+    padding: 25px 30px;
+    position: relative;
+}
+
+.reviews .button {
+    max-width: 367px;
+    margin: 25px auto;
+}
+
+.license {
+    background-color: #ededed;
+    height: 520px;
+}
+
+.license h2 {
+    font-size: 28px;
+    font-family: "ClearSans";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    padding: 70px;
+    margin: 0;
+    letter-spacing: 0.7px;
+}
+
+.first_footer {
+    background-color: #563997;
+}
+
+.first_footer .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+footer .buttons {
+    margin: 60px 0 70px;
+}
+
+footer .button {
+    background-color: #cfc9dc;
+    box-sizing: border-box;
+    border: 3px solid #ffffff;
+    max-width: 360px;
+    padding: 14px;
+    margin: 20px 0 10px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+footer .button .icon {
+    background: url(../images/sprites.svg) #cfc9dc;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    margin: auto 0;
+    height: 70px;
+    width: 70px;
+}
+
+footer .school .icon {
+    background-position: -999px -115px;
+}
+
+footer .before_school .icon {
+    background-position: -240px -115px;
+}
+
+footer .after_school .icon {
+    background-position: -115px -115px; 
+}
+
+footer .button .line1 {
+    font-size: 18px;
+    font-family: "ClearSans";
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+    margin-left: 70px;
+}
+
+footer .button .line2 {
+    font-size: 15px;
+    font-family: "ClearSans";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: left;
+    margin-left: 70px;
+}
+
+footer .contacts {
+   text-align: right;
+   margin: 60px 0 90px;
+}
+
+.contacts img {
+    width: 130px;
+    height: 130px;
+}
+
+.contacts .address {
+    font-size: 22px;
+    font-family: "ClearSans";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: right;
+    max-width: 300px;
+    padding: 10px 0 20px;
+}
+
+.contacts .phonenumber {
+    font-size: 22px;
+    font-family: "ClearSans";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: right;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+.phonenumbers p {
+    font-size: 14px;
+    font-family: "ClearSans";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: right;
+    margin: 0 0 5px;
+}
+
+.second_footer {
+    background-color: #3c276b;
+    font-size: 14px;
+    font-family: "Myriad Pro";
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: left;
+    padding: 20px;
+}
+
 
 
 @media (max-width: 1200px) {
@@ -571,7 +783,7 @@ h3 {
      max-width:1200px;
      padding:0 40px;
      margin:0 auto;
-     left: 0;
+     left: 80px;
      width: auto;
     }
     
@@ -587,8 +799,8 @@ h3 {
         position: absolute;
         z-index: 1;
         padding-left: 0;
-        top: 70px;
-        left: 230px;
+        top: 110px;
+        left: 10px;
     }
     
     .menu li {
