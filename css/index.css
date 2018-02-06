@@ -33,6 +33,14 @@
   font-style: normal;
 }
 
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+     -webkit-appearance: none;
+     border-radius: 0;
+}
+
 body {
     margin: 0;
 }
@@ -65,7 +73,7 @@ div {
     font-style: italic;
     line-height: 1.2;
     text-align: left;
-    padding: 10px 0 10px 140px;
+    padding: 10px 0 10px 220px;
     max-width: 300px;
 }
 
@@ -348,11 +356,13 @@ h3 {
     box-sizing: border-box;
     width: 33.333%;
     padding: 20px;
+    display: flex;
 }
 
 .courses .card_wrapper {
     border: 3px solid #ffffff;
     box-shadow: 0 0 10px #cfcfcf;
+    height: 100%;
 }
 
 .card .photo {
@@ -519,6 +529,7 @@ h3 {
     width: 50%;
     padding: 30px 10px;
     position: relative;
+    display: flex;
 }
 
 .advantages .for_line2 {
@@ -529,6 +540,7 @@ h3 {
 .advantage {
     border: 3px solid #ffffff;
     box-shadow: 0 0 10px #cfcfcf;
+    height: 100%;
 }
 
 .violet {
@@ -612,6 +624,8 @@ h3 {
     padding: 25px;
     width: 33.333%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .reviews .text {
@@ -622,7 +636,7 @@ h3 {
     line-height: 1.2;
     text-align: justify;
     padding: 25px 30px;
-    height: 115px;
+    height: 100%;
 }
 
 .reviews .icon {
@@ -797,11 +811,14 @@ footer .contacts {
 @media (max-width: 1200px) {
      .special_wrapper {
      max-width:1280px;
-     padding:0 40px;
+     padding: 0 40px 0 -40px;
      margin:0 auto;
-     left: 80px;
+     left: 0;
      width: auto;
-     position: none;
+    }
+    
+    .logo1 {
+      left: 80px;
     }
     
     .navbar {
@@ -896,6 +913,11 @@ footer .contacts {
 }
 
 @media (max-width: 500px) {
+    
+    .start h2 {
+    font-size: 30px;
+    }
+    
     .wpcf7-form-control-wrap {
     width: 100%;
     }
