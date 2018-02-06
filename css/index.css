@@ -483,11 +483,10 @@ h3 {
 }
 
 .advantages .wrapper {
-    background-color: #ffffff;
+    background: -webkit-linear-gradient(left, #f5f5f5 0%,#f5f5f5 10%,#ffffff 10%,#ffffff 100%);
     display: flex;
     flex-wrap: wrap;
     max-width: 1230px;
-    padding: 0;
 }
 
 .advantages  .man_and_woman {
@@ -802,6 +801,7 @@ footer .contacts {
      margin:0 auto;
      left: 80px;
      width: auto;
+     position: none;
     }
     
     .navbar {
@@ -817,7 +817,7 @@ footer .contacts {
         z-index: 1;
         padding-left: 0;
         top: 110px;
-        left: 10px;
+        right: 10px;
     }
     
     .menu li {
@@ -829,22 +829,37 @@ footer .contacts {
     }
 }
 
-@media (max-width: 922px) {
-    .wpcf7-form-control-wrap {
-    width: 50%;
-    }
-    
+@media (max-width: 1032px) {
     .courses .wrapper {
     margin-top: 220px;
     }
     
-    .card {
+    .courses .card {
+    width: 100%;
+    }
+    
+    .advantages .card_wrapper {
     width: 100%;
     }
     
     .reviews .card {
     width: 100%
     }
+}
+    
+
+@media (max-width: 922px) {
+    .wpcf7-form-control-wrap {
+    width: 50%;
+    }
+    
+    .man_and_woman {
+        display: none;
+    }
+    
+    .advantages .wrapper {
+    background: #ffffff;
+}
         
     .first_footer .wrapper {
     justify-content: center;
@@ -859,16 +874,20 @@ footer .contacts {
 @media (max-width: 768px) {
    .phones {
     position: relative;
-    width: 100%;
     max-width: 1200px;
     padding: 11px 10px;
-    margin: 0 0 0 auto;
     z-index: 0; 
     text-align: right;
     }
     
+    .phones_wrapper {
+    max-width: 300px;
+    margin: 0 0 0 auto;
+    }
+    
     .burger {
     right: 10px;
+    left: auto;
     }
     
     .start .wrapper {
