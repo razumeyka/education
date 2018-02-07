@@ -41,19 +41,14 @@ input[type="submit"] {
      border-radius: 0;
 }
 
-body {
-    margin: 0;
-}
-
-div {
-    display: block;
-}
-
-.special_wrapper {
-    position: relative;
-    left: 50%;
-    margin-left: -600px;
-    width: calc(50% + 600px);
+body{
+	margin:0;
+	padding: 0;
+	font-family: 'основной шрифт', sans-serif;
+	font-size: 14px;
+	line-height:1.4;
+	color:#000;
+	min-width: 360px;
 }
 
 .wrapper {
@@ -64,6 +59,7 @@ div {
 
 .cursive {
     background-color: #efefef;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .cursive .inner {
@@ -73,8 +69,22 @@ div {
     font-style: italic;
     line-height: 1.2;
     text-align: left;
-    padding: 10px 0 10px 220px;
+    padding: 10px 0 10px 145px;
     max-width: 300px;
+}
+
+.logo1 {
+    background-image: url(../images/ribbon-big.png);
+    background-position: center center;
+    background-size: cover;
+    width: 120px;
+    height: 130px;
+    position: absolute;
+    top: 0;
+    left: 80px;
+    z-index: 1;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .menu {
@@ -150,8 +160,6 @@ div {
     top: 20px;
 }
 
-.burger.active {
-
 .burger .active span {
     opacity: 0;
 }
@@ -165,7 +173,6 @@ div {
     transform: rotate(-45deg);
     top: 0;
 }       
-}
 
 .phones {
     background-color: #563997;
@@ -194,27 +201,12 @@ div {
     text-decoration: none;
 }
 
-.phones p {
+.phones .free {
     font-size: 14px;
     font-family: "Cleanvertising";
     font-weight: 300;
     color: rgb(255, 255, 255);
     line-height: 1.2;
-    margin: 0;
-}
-
-.logo1 {
-    background-image: url(../images/ribbon-big.png);
-    background-position: center center;
-    background-size: cover;
-    width: 120px;
-    height: 130px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    text-align: center;
-    padding-top: 10px;
 }
 
 .start {
@@ -227,7 +219,7 @@ div {
     padding: 200px 0 135px;
 }
 
-h2 {
+h1 {
   font-size: 38px;
   font-family: "ClearSans";
   font-weight: Bold;
@@ -239,7 +231,7 @@ h2 {
   letter-spacing: 1px;
 }
 
-h3 {
+h2 {
   font-size: 24px;
   font-family: "ClearSans";
   font-weight: Bold;
@@ -259,18 +251,21 @@ h3 {
     padding: 0 25px 5px;
 }
 
-.form_for_questions .wrapper {
-    position: relative;
-    max-width: 1150px;
+.form_for_questions {
+    padding: 0 31px;
 }
 
 .for_line {
     border: 4px solid #f7a801;
-    position: absolute;
     left: 0;
     right: 0;
-    padding: 10px;
-    margin-top: -85px;
+    padding: 5px;
+    margin: -90px auto 0;
+    max-width: 1200px;
+}
+
+.for_line .wrapper {
+    padding: 0;
 }
 
 .questions {
@@ -283,9 +278,11 @@ h3 {
     text-transform: uppercase;
     line-height: 1.13;
     text-align: center;
-    padding: 45px 30px 30px;
+    padding: 45px 30px 25px;
     letter-spacing: 1.2px;
-    margin-top: -35px;
+    margin-top: -30px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .questions form {
@@ -303,18 +300,33 @@ h3 {
 
 .wpcf7-form-control-wrap input {
     display: block;
-    padding-left: 15px;
-    font-size: 15px;
+    padding: 0 15px;
+    font-size: 14px;
     box-sizing: border-box;
     border: none;
-    border-radius: 3px;
+    border-radius: 2px;
     height: 46px;
     width: 100%;
 }
 
-.wpcf7-form-control-wrap input[type="submit"] {
+.wpcf7-form-control-wrap button {
     display: block;
+    background-color: rgb(218, 93, 0);
+    border-radius: 2px;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 0 4px;
+    border: none;
+}
+
+.wpcf7-form-control-wrap button:hover {
+    padding: 0 0 2px;
+}
+
+.wpcf7-form-control-wrap button .inner {
     background-color: #f7a801;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
     font-size: 16px;
     font-family: "ClearSans";
     color: rgb(255, 255, 255);
@@ -322,11 +334,13 @@ h3 {
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
-    box-shadow: 0 5px #d35a00;
+    padding: 14px;
+    border-radius: 2px;
+    letter-spacing: 0.8px;
 }
 
-.courses .wrapper {
-    margin-top: 160px;
+.courses {
+    margin-top: 60px;
 }
 
 .courses h2 {
@@ -337,7 +351,7 @@ h3 {
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   letter-spacing: 0.7px;
 }
 
@@ -349,20 +363,22 @@ h3 {
 .cards {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -20px;
+    margin: 0 -23px;
 }
 
 .courses .card {
     box-sizing: border-box;
     width: 33.333%;
-    padding: 20px;
+    padding: 23px;
     display: flex;
 }
 
 .courses .card_wrapper {
     border: 3px solid #ffffff;
-    box-shadow: 0 0 10px #cfcfcf;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
     height: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .card .photo {
@@ -376,11 +392,11 @@ h3 {
     border-radius: 50%;
     box-sizing: border-box;
     position: absolute;
-    bottom: -60px;
+    bottom: -70px;
     left: 0;
     right: 0;
     margin: auto;
-    height: 130px;
+    height: 140px;
     width: 140px;
 }
 
@@ -418,7 +434,8 @@ h3 {
     color: rgb(0, 0, 0);
     line-height: 1.2;
     text-align: center;
-    padding: 5px;
+    padding: 5px 0;
+    position: relative;
 }
 
 .card .button, .reviews .button {
@@ -439,10 +456,11 @@ h3 {
     padding: 14px;
     margin: 20px 0 10px;
     display: block;
+    cursor: pointer;
 }
 
-.discount .wrapper {
-    margin: 60px auto;
+.discount  {
+    margin: 60px 0;
 }
 
 .discount .promo {
@@ -453,7 +471,7 @@ h3 {
     height: 355px;
     padding: 80px 0;
     border: 3px solid #ffffff;
-    box-shadow: 0 0 10px #cfcfcf;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 .discount h2 {
@@ -465,11 +483,13 @@ h3 {
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.357;
-    margin: 18px auto 22px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 18px 10px 22px;
     letter-spacing: 0.8px;
 }
 
-.discount h3 {
+.discount .application {
     font-size: 20px;
     font-family: "ClearSans";
     color: rgb(255, 255, 255);
@@ -477,7 +497,7 @@ h3 {
     text-align: center;
     letter-spacing: 0;
     font-weight: normal;
-    margin: 23px;
+    padding: 23px;
 }
 
 .discount span {
@@ -515,6 +535,7 @@ h3 {
 
 .advantages_cards {
     flex:1;
+    padding-bottom: 90px;
 }
 
 .cards_wrapper {
@@ -527,7 +548,7 @@ h3 {
 .advantages .card_wrapper {
     box-sizing: border-box;
     width: 50%;
-    padding: 30px 10px;
+    padding: 70px 10px 30px;
     position: relative;
     display: flex;
 }
@@ -540,6 +561,7 @@ h3 {
 .advantage {
     border: 3px solid #ffffff;
     box-shadow: 0 0 10px #cfcfcf;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
     height: 100%;
 }
 
@@ -599,11 +621,11 @@ h3 {
 }
 
 .reviews .wrapper {
-    padding-bottom: 60px;
+    padding-bottom: 65px;
 }
 
-.reviews h2 {
-    padding: 75px 0 10px;
+.reviews h3 {
+    padding: 75px 0 20px;
     font-size: 28px;
     font-family: "ClearSans";
     color: rgb(255, 255, 255);
@@ -612,16 +634,17 @@ h3 {
     line-height: 1.2;
     text-align: center;
     letter-spacing: 0.8px;
+    margin: 0;
 }
 
 .review_cards {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -25px;
+    margin: 0 -23px;
 }
 
 .reviews .card {
-    padding: 25px;
+    padding: 23px;
     width: 33.333%;
     box-sizing: border-box;
     display: flex;
@@ -635,7 +658,7 @@ h3 {
     color: rgb(0, 0, 0);
     line-height: 1.2;
     text-align: justify;
-    padding: 25px 30px;
+    padding: 25px 30px 42px;
     height: 100%;
 }
 
@@ -666,6 +689,7 @@ h3 {
 .reviews .button {
     max-width: 367px;
     margin: 25px auto;
+    cursor: pointer;
 }
 
 .license {
@@ -673,7 +697,7 @@ h3 {
     height: 520px;
 }
 
-.license h2 {
+.license .headline {
     font-size: 28px;
     font-family: "ClearSans";
     color: rgb(0, 0, 0);
@@ -689,6 +713,7 @@ h3 {
 .first_footer {
     background-color: #563997;
     width: 100%;
+    padding: 50px 0;
 }
 
 .first_footer .wrapper {
@@ -698,7 +723,7 @@ h3 {
 }
 
 footer .buttons {
-    margin: 60px 0 70px;
+    margin: 10px 0 20px;
 }
 
 footer .button {
@@ -711,6 +736,7 @@ footer .button {
     display: block;
     text-decoration: none;
     position: relative;
+    cursor: pointer;
 }
 
 footer .button .icon {
@@ -731,11 +757,11 @@ footer .school .icon {
 }
 
 footer .before_school .icon {
-    background-position: -110px -50px;
+    background-position: -105px -50px;
 }
 
 footer .after_school .icon {
-    background-position: -50px -50px;
+    background-position: -45px -50px;
 }
 
 footer .button .line1 {
@@ -757,11 +783,12 @@ footer .button .line2 {
     text-align: left;
     margin-left: 50px;
     letter-spacing: 0;
+
 }
 
 footer .contacts {
    text-align: right;
-   margin: 60px 0 90px auto;
+   margin: 10px 0 40px auto;
 }
 
 .contacts img {
@@ -788,25 +815,23 @@ footer .contacts {
     letter-spacing: 0;
 }
 
-.phonenumbers p {
+.phonenumbers .free {
     font-size: 14px;
     font-family: "ClearSans";
     color: rgb(255, 255, 255);
     line-height: 1.2;
-    margin: 0 0 5px;
+    margin-bottom: 5px;
 }
 
 .second_footer {
     background-color: #3c276b;
     font-size: 14px;
-    font-family: "Myriad Pro";
+    font-family: "ClearSans";
     color: rgb(255, 255, 255);
     line-height: 1.2;
     text-align: left;
     padding: 20px;
 }
-
-
 
 @media (max-width: 1200px) {
      .special_wrapper {
@@ -815,10 +840,6 @@ footer .contacts {
      margin:0 auto;
      left: 0;
      width: auto;
-    }
-    
-    .logo1 {
-      left: 80px;
     }
     
     .navbar {
@@ -847,20 +868,31 @@ footer .contacts {
 }
 
 @media (max-width: 1032px) {
-    .courses .wrapper {
+    
+    .wrapper {
+        padding: 0 15px;
+    }
+    
+    .courses {
     margin-top: 220px;
     }
     
     .courses .card {
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     }
     
     .advantages .card_wrapper {
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     }
     
     .reviews .card {
-    width: 100%
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     }
 }
     
@@ -871,7 +903,7 @@ footer .contacts {
     }
     
     .man_and_woman {
-        display: none;
+    display: none;
     }
     
     .advantages .wrapper {
@@ -882,9 +914,23 @@ footer .contacts {
     justify-content: center;
     }
     
+    footer  .buttons {
+    order: 2;
+    width: 100%;
+    }
+    
+    footer .button {
+    margin: 20px auto 10px;  
+    }
+    
     footer .contacts {
     text-align: center;
-    margin: 20px;
+    order: 1;
+    width: 100%;
+    }
+    
+    .contacts .address {
+    margin: 0 auto;
     }
 }
 
@@ -914,16 +960,12 @@ footer .contacts {
 
 @media (max-width: 500px) {
     
-    .start h2 {
+    .start h1 {
     font-size: 30px;
     }
     
     .wpcf7-form-control-wrap {
     width: 100%;
-    }
-    
-    .courses .wrapper {
-    margin-top: 490px;
     }
     
     .discount .promo {
