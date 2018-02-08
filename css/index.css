@@ -76,7 +76,9 @@ header {
     max-width: 300px;
     margin-left: 145px;
 }
-
+header .wrapper{
+	position:relative;
+}
 .logo1 {
     background-image: url(../images/ribbon-big.png);
     background-position: center center;
@@ -85,7 +87,7 @@ header {
     height: 130px;
     position: absolute;
     top: 0;
-    left: 75px;
+    left: 40px;
     z-index: 1;
     text-align: center;
     padding-top: 10px;
@@ -94,7 +96,6 @@ header {
 .menu {
     display: block;
     background-color: #ffffff;
-    overflow:hidden;
     margin: 0 0 0 90px;
 }
 
@@ -139,8 +140,13 @@ header {
     display: none;
 }
 
-.menu ul li:hover .submenu {
+.menu li:hover .submenu {
     display: block;
+}
+.menu:after{
+	content:"";
+	display:block;
+	clear:both;
 }
 
 .submenu li {
@@ -913,18 +919,14 @@ footer .contacts {
     .wrapper {
         padding: 0 15px;
     }
-    
-    .logo1 {
-    left: 40px;
-    }
+	.cards,.review_cards {
+		margin: 0 -15px;
+	}
     
     .cursive .inner {
     margin-left: 170px;
     }
     
-    .courses {
-    margin-top: 220px;
-    }
     
     .courses .card {
     width: 100%;
