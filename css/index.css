@@ -143,6 +143,7 @@ header .wrapper{
 .menu li:hover .submenu {
     display: block;
 }
+
 .menu:after{
 	content:"";
 	display:block;
@@ -376,6 +377,10 @@ h2 {
     padding: 0 0 2px;
 }
 
+.wpcf7-form-control-wrap button:hover .inner {
+    padding-bottom: 16px;
+}
+
 .wpcf7-form-control-wrap button .inner {
     background-color: #f7a801;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
@@ -491,11 +496,20 @@ h2 {
 }
 
 .card .button, .reviews .button {
-    background-color: #f7a801;
+    display: block;
+    background-color: rgb(218, 93, 0);
+    border-radius: 2px;
+    cursor: pointer;
     box-sizing: border-box;
+    width: 100%;
+    padding: 0 0 4px;
     border: none;
-    border-radius: 3px;
-    box-shadow: 0 5px #d35a00;
+    margin: 20px 0 10px;
+}
+
+.card .button .inner, .reviews .button .inner {
+    background-color: #f7a801;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
     font-size: 16px;
     font-family: "ClearSans";
     color: rgb(255, 255, 255);
@@ -506,9 +520,14 @@ h2 {
     text-align: center;
     letter-spacing: 1px;
     padding: 14px;
-    margin: 20px 0 10px;
-    display: block;
-    cursor: pointer;
+}
+
+.card .button:hover, .reviews .button:hover {
+    padding: 0 0 2px;
+}
+
+.card .button:hover .inner, .reviews .button:hover .inner {
+    padding-bottom: 16px;
 }
 
 .discount  {
@@ -900,7 +919,7 @@ footer .contacts {
         position: absolute;
         z-index: 1;
         padding-left: 0;
-        top: 110px;
+        top: 50px;
         left: 185px;
         margin: 0;
     }
@@ -909,8 +928,13 @@ footer .contacts {
         float: none;
     }
     
-    .menu li::before {
-        border: none;
+     .menu li a::before {
+    border: none;
+    }
+    
+    .menu li:hover .submenu {
+    position: static;
+    margin-left: 20px;
     }
 }
 
@@ -1003,9 +1027,13 @@ footer .contacts {
     
     .menu {
     padding-left: 0;
-    top: 70px;
+    top: 10px;
     right: 10px;
     left:auto;
+    }
+    
+    .menu li a::before {
+    border: none;
     }
     
     .start .wrapper {
