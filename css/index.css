@@ -57,9 +57,12 @@ body{
      margin:0 auto;
 }
 
+header {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
 .cursive {
     background-color: #efefef;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .cursive .inner {
@@ -69,19 +72,20 @@ body{
     font-style: italic;
     line-height: 1.2;
     text-align: left;
-    padding: 10px 0 10px 145px;
+    padding: 10px 0;
     max-width: 300px;
+    margin-left: 145px;
 }
 
 .logo1 {
     background-image: url(../images/ribbon-big.png);
     background-position: center center;
     background-size: cover;
-    width: 120px;
+    width: 130px;
     height: 130px;
     position: absolute;
     top: 0;
-    left: 80px;
+    left: 75px;
     z-index: 1;
     text-align: center;
     padding-top: 10px;
@@ -91,13 +95,13 @@ body{
     display: block;
     background-color: #ffffff;
     overflow:hidden;
-    margin: 0;
-    padding-left: 125px;
+    margin: 0 0 0 90px;
 }
 
 .menu li {
     list-style: none;
     float: left;
+    position: relative;
 }
 
 .menu a {
@@ -109,13 +113,53 @@ body{
     text-transform: uppercase;
     line-height: 1.2;
     text-decoration: none;
-    padding: 13px 17px 13px;
+    padding: 12px 20px 12px 16px;
     letter-spacing: 0.6px;
 }
 
-.menu li span {
+.menu li a::before {
+    content: "";
     border-left: 2px solid #f7a801;
-    padding: 4px 0;
+    padding: 3px;
+    margin: 7px 10px 7px -20px;
+}
+
+.menu li:first-child a::before {
+    border-left: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 47px;
+    left: 0px;
+    display: none;
+}
+
+.menu ul li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    position: relative;
+    transition: all .2s linear 0s;
+}
+
+.submenu li a {
+    position: relative;
+    background-color: #ffffff;
+    font-size: 15px;
+    font-family: "ClearSans";
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-decoration: none;
+    padding: 12px 20px 12px 16px;
+    letter-spacing: 0.6px;
 }
 
 .burger_wrapper {
@@ -129,7 +173,7 @@ body{
     background: #fff;
     width: 40px;
     height: 40px;
-    left: 10px;
+    left: 185px;
     top: 59px;
     border: 1px solid #563997;
     border-radius: 4px;
@@ -160,18 +204,18 @@ body{
     top: 20px;
 }
 
-.burger .active span {
-    opacity: 0;
+.burger.active span {
+    background-color: transparent;
 }
     
- .burger .active span::before  {
+ .burger.active span::before  {
     transform: rotate(45deg);
-    top: 0;
+    top: 8px;
 }
 
- .burger .active span::after  {
+ .burger.active span::after  {
     transform: rotate(-45deg);
-    top: 0;
+    top: 8px;
 }       
 
 .phones {
@@ -179,8 +223,8 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    max-width: 290px;
-    padding: 11px 10px;
+    max-width: 300px;
+    padding: 10px 26px 12px 0;
     z-index: 1;
     text-align: left;
 }
@@ -190,10 +234,11 @@ body{
     width: 80px;
     height: 80px;
     float: left;
+    margin: 0 5px;
 }
 
 .phones a {
-    font-size: 24px;
+    font-size: 22px;
     font-family: "ClearSans";
     font-weight: Bold;
     color: rgb(255, 255, 255);
@@ -202,11 +247,12 @@ body{
 }
 
 .phones .free {
-    font-size: 14px;
-    font-family: "Cleanvertising";
+    font-size: 13px;
+    font-family: "ClearSans";
     font-weight: 300;
     color: rgb(255, 255, 255);
     line-height: 1.2;
+    padding-bottom: 5px;
 }
 
 .start {
@@ -530,25 +576,24 @@ h2 {
 
 .advantages  .man_and_woman img {
     width: 430px;
-    padding: 35px 0;
+    padding: 35px 0 25px;
 }
 
 .advantages_cards {
     flex:1;
-    padding-bottom: 90px;
 }
 
 .cards_wrapper {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 15px;padding-top: 15px;
+    padding: 15px 0;
     margin: 0 -10px;
 }
 
 .advantages .card_wrapper {
     box-sizing: border-box;
     width: 50%;
-    padding: 70px 10px 30px;
+    padding: 90px 30px 30px;
     position: relative;
     display: flex;
 }
@@ -556,13 +601,15 @@ h2 {
 .advantages .for_line2 {
     border: 4px solid rgb(247, 168, 1);
     padding: 10px;
+    margin-right: -15px;
 }
 
 .advantage {
     border: 3px solid #ffffff;
-    box-shadow: 0 0 10px #cfcfcf;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
-    height: 100%;
+    margin-top: -23px;
+    margin-left: -26px;
+    background-color: #ffffff; 
 }
 
 .violet {
@@ -618,6 +665,7 @@ h2 {
     background-image: url(../images/reviews.jpg);
     background-position: center center;
     background-size: cover;
+    margin-top: 50px;
 }
 
 .reviews .wrapper {
@@ -834,14 +882,6 @@ footer .contacts {
 }
 
 @media (max-width: 1200px) {
-     .special_wrapper {
-     max-width:1280px;
-     padding: 0 40px 0 -40px;
-     margin:0 auto;
-     left: 0;
-     width: auto;
-    }
-    
     .navbar {
         display: none;
     }
@@ -855,14 +895,15 @@ footer .contacts {
         z-index: 1;
         padding-left: 0;
         top: 110px;
-        right: 10px;
+        left: 185px;
+        margin: 0;
     }
     
     .menu li {
         float: none;
     }
     
-    .menu li span {
+    .menu li::before {
         border: none;
     }
 }
@@ -871,6 +912,14 @@ footer .contacts {
     
     .wrapper {
         padding: 0 15px;
+    }
+    
+    .logo1 {
+    left: 40px;
+    }
+    
+    .cursive .inner {
+    margin-left: 170px;
     }
     
     .courses {
@@ -936,21 +985,25 @@ footer .contacts {
 
 @media (max-width: 768px) {
    .phones {
+    background-color: #f7a801;
     position: relative;
     max-width: 1200px;
-    padding: 11px 10px;
+    padding: 80px 10px 10px;
     z-index: 0; 
-    text-align: right;
-    }
-    
-    .phones_wrapper {
-    max-width: 300px;
-    margin: 0 0 0 auto;
+    margin-top: -45px;
     }
     
     .burger {
+    top: 10px;
     right: 10px;
     left: auto;
+    }
+    
+    .menu {
+    padding-left: 0;
+    top: 70px;
+    right: 10px;
+    left:auto;
     }
     
     .start .wrapper {
@@ -958,7 +1011,11 @@ footer .contacts {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 526px) {
+    
+    .cursive .inner {
+    color: #efefef;
+    }
     
     .start h1 {
     font-size: 30px;
