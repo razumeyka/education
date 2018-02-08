@@ -505,6 +505,7 @@ h2 {
     padding: 0 0 4px;
     border: none;
     margin: 20px 0 10px;
+    text-decoration: none;
 }
 
 .card .button .inner, .reviews .button .inner {
@@ -515,7 +516,6 @@ h2 {
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-transform: uppercase;
-    text-decoration: none;
     line-height: 1.2;
     text-align: center;
     letter-spacing: 1px;
